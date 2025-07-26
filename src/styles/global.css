@@ -1,32 +1,47 @@
 @import "tailwindcss";
-@plugin "daisyui";
-
 @plugin "daisyui"{
-	themes: light --default;
+	themes: dark --default;
 }
 
-/* @plugin "daisyui/theme" {
-	name: "dark";
-	default: true;
 
-	--color-base-100: red;
-  --color-base-200: oklch(95% 0.03 240);
-  --color-base-300: oklch(92% 0.04 240);
-  --color-base-content: oklch(20% 0.05 240);
-  --color-primary: oklch(55% 0.3 240);
-  --color-primary-content: oklch(98% 0.01 240);
-  --color-secondary: oklch(70% 0.25 200);
-  --color-secondary-content: oklch(98% 0.01 200);
-  --color-accent: oklch(65% 0.25 160);
-  --color-accent-content: oklch(98% 0.01 160);
-  --color-neutral: oklch(50% 0.05 240);
-  --color-neutral-content: oklch(98% 0.01 240);
-  --color-info: oklch(70% 0.2 220);
-  --color-info-content: oklch(98% 0.01 220);
-  --color-success: oklch(65% 0.25 140);
-  --color-success-content: oklch(98% 0.01 140);
-  --color-warning: oklch(80% 0.25 80);
-  --color-warning-content: oklch(20% 0.05 80);
-  --color-error: oklch(65% 0.3 30);
-  --color-error-content: oklch(98% 0.01 30);
-} */
+@plugin "daisyui/theme"{
+  name: "dark";
+  default: true;
+
+  /* Base Backgrounds - Very Dark */
+  --color-base-100: oklch(10% 0.02 240); /* Deepest background, almost black with blue tint */
+  --color-base-200: oklch(15% 0.03 240); /* Slightly lighter background for cards/sections */
+  --color-base-300: oklch(20% 0.04 240); /* Even lighter background for elevated elements */
+
+  /* Base Content - Light for readability on dark backgrounds */
+  --color-base-content: oklch(90% 0 240); /* Main text color, light greyish-blue */
+
+  /* Primary Color - Vibrant Blue */
+  --color-primary: oklch(60% 0.25 240); /* Main interactive elements, buttons, highlights */
+  --color-primary-content: oklch(98% 0.01 240); /* Text on primary color, near white */
+
+  /* Secondary Color - Vibrant Purple */
+  --color-secondary: oklch(60% 0.25 300); /* Secondary interactive elements, complementary highlights */
+  --color-secondary-content: oklch(98% 0.01 300); /* Text on secondary color, near white */
+
+  /* Accent Color - Bright Cyan/Aqua */
+  --color-accent: oklch(70% 0.2 200); /* Eye-catching accents, progress bars, active states */
+  --color-accent-content: oklch(10% 0.01 200); /* Text on accent color, dark for contrast */
+
+  /* Neutral Colors - Dark Greys */
+  --color-neutral: oklch(25% 0.05 240); /* Neutral background for subtle elements, borders */
+  --color-neutral-content: oklch(85% 0.01 240); /* Text on neutral color, light grey */
+
+  /* Semantic Colors - Adjusted for Dark Theme */
+  --color-info: oklch(70% 0.2 220); /* Information messages, light blue */
+  --color-info-content: oklch(10% 0.01 220); /* Text on info color, dark */
+
+  --color-success: oklch(65% 0.25 140); /* Success messages, vibrant green */
+  --color-success-content: oklch(10% 0.01 140); /* Text on success color, dark */
+
+  --color-warning: oklch(80% 0.25 80); /* Warning messages, bright yellow-orange */
+  --color-warning-content: oklch(10% 0.05 80); /* Text on warning color, dark */
+
+  --color-error: oklch(65% 0.3 30); /* Error messages, strong red */
+  --color-error-content: oklch(10% 0.01 30); /* Text on error color, dark */
+}

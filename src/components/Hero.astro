@@ -1,0 +1,92 @@
+---
+import YoImage from "../assets/yo.jpg";
+
+const HERO_TECHNOLOGIES = [
+	"React",
+	"Vue",
+	"Next.js",
+	"Nuxt.js",
+	"Node.js",
+	".NET",
+	"AWS",
+	"Azure",
+	"GCP",
+];
+---
+
+<div
+	class="hero bg-radial-[at_25%_25%] from-base-100 to-base-200 min-h-screen pt-16"
+>
+	<div class="hero-content flex-col lg:flex-row-reverse">
+		<div class="flex-3 text-center lg:text-left">
+			<h2 class="text-7xl font-bold">Full-Stack</h2>
+			<h2 class="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-secondary">Developer</h2>
+			<p class="py-6 text-2xl text-base-content/80">
+				Crafting modern web applications and cloud solutions with cutting-edge
+				technologies. From concept to deployment, I bring your ideas to life.
+			</p>
+			<div class="flex flex-wrap gap-3">
+				{
+					HERO_TECHNOLOGIES.map((tech) => (
+						<span class="badge badge-soft badge-xl border-1 hover:border-primary/20 cursor-default">
+							{tech}
+						</span>
+					))
+				}
+			</div>
+			<div class="flex gap-4 mt-6">
+				<button class="btn px-20 bg-linear-to-br from-primary to-secondary">
+					About Me
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="lucide lucide-arrow-right ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+						data-lov-id="src/components/Hero.tsx:82:16"
+						data-lov-name="ArrowRight"
+						data-component-path="src/components/Hero.tsx"
+						data-component-line="82"
+						data-component-file="Hero.tsx"
+						data-component-name="ArrowRight"
+						data-component-content="%7B%22className%22%3A%22ml-2%20w-4%20h-4%20group-hover%3Atranslate-x-1%20transition-transform%22%7D"
+						><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+					>
+				</button>
+				<button class="btn"> Get in Touch </button>
+			</div>
+		</div>
+		<div class="flex-2 card w-full shadow-2xl min-h-96">
+			<div class="card-body justify-center text-center">
+				<div class="avatar justify-center">
+					<div id="hero-image" class="w-1/3 lg:w-2/3 rounded-full border-3 border-primary">
+						<img src={YoImage.src} />
+					</div>
+				</div>
+				<h1 class="text-4xl mt-1">Leonardo Vertiz</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	#hero-image {
+		animation: quiet-movement 3s infinite ease-in-out;
+	}
+	@keyframes quiet-movement {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+</style>
