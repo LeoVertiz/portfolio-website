@@ -43,18 +43,18 @@ const HERO_TECHNOLOGIES = [
 			<div class="flex flex-wrap gap-3 justify-center lg:justify-start">
 				{
 					HERO_TECHNOLOGIES.map((tech) => (
-						<span class="badge badge-soft badge-xl shadow-primary/20 hover:shadow-xl cursor-default">
+						<span class="badge badge-soft badge-xl cursor-default">
 							{tech}
 						</span>
 					))
 				}
 			</div>
 			<div class="flex gap-4 mt-6 justify-center lg:justify-start">
-				<button class="btn px-8 bg-linear-to-br from-primary to-secondary gap-4">
+				<a href="#about" class="btn px-8 bg-linear-to-br from-primary to-secondary gap-4">
 					About Me
 					<span class="material-symbols-outlined" style="font-size: medium;">arrow_forward</span>
-				</button>
-				<button class="btn hover:bg-primary"> Get in Touch </button>
+				</a>
+				<a href="#contact" class="btn hover:bg-primary"> Get in Touch </a>
 			</div>
 		</div>
 		<div class="hidden md:block -z-10">
