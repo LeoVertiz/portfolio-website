@@ -73,7 +73,8 @@ const { available_for_new_projects, current_availability } = import.meta.env;
 				)
 			}
 			{ available_for_new_projects }
-			{ available_for_new_projects == 'true' }
-			{ available_for_new_projects == 'false' }
+			{ typeof available_for_new_projects }
+			{ available_for_new_projects.length }
+			{ 'true'.length }
 		</div>
 	</div>
