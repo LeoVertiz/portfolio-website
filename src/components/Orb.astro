@@ -1,0 +1,30 @@
+---
+const {
+	color = 'primary',
+	size = '100px',
+	left = 'unset',
+	top = 'unset',
+	right = 'unset',
+	bottom = 'unset',
+} = Astro.props;
+---
+
+<div class="orb" style={`background-color: var(--color-${color})`}>
+
+</div>
+
+<style define:vars={{ size, left, top, right, bottom }}>
+.orb {
+	position: absolute;
+	left: var(--left);
+	top: var(--top);
+	right: var(--right);
+	bottom: var(--bottom);
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	animation: rotate 10s linear infinite;
+	filter: blur(calc(var(--size) / 3));
+	opacity: 0.5;
+}
+</style>

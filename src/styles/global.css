@@ -45,3 +45,14 @@
   --color-error: oklch(65% 0.3 30); /* Error messages, strong red */
   --color-error-content: oklch(10% 0.01 30); /* Text on error color, dark */
 }
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-secondary;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+	scroll-padding: 4rem;
+}

@@ -1,68 +1,30 @@
 ---
 import YoImage from "../assets/yo.jpg";
+import Orb from "./Orb.astro";
 
 const HERO_TECHNOLOGIES = [
-	"React",
-	"Vue",
-	"Next.js",
-	"Nuxt.js",
-	"Node.js",
-	".NET",
-	"AWS",
-	"Azure",
-	"GCP",
+	'Frontend',
+	'Backend',
+	'Cloud',
+	'DevOps',
+	'Mobile',
+	'Security',
+	'Performance',
+	'Accessibility',
+	'Scalability',
+	'Responsive Design',
+	'Progressive Web Apps',
+	'Serverless',
 ];
 ---
 
 <div
-	class="hero bg-radial-[at_25%_25%] from-base-100 to-base-200 min-h-screen pt-16"
+	id="home"
+	class="hero bg-radial-[at_25%_25%] from-base-100 to-gray-800 min-h-screen mt-16 pt-4!"
 >
-	<div class="hero-content flex-col lg:flex-row-reverse">
-		<div class="flex-3 text-center lg:text-left">
-			<h2 class="text-7xl font-bold">Full-Stack</h2>
-			<h2 class="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-secondary">Developer</h2>
-			<p class="py-6 text-2xl text-base-content/80">
-				Crafting modern web applications and cloud solutions with cutting-edge
-				technologies. From concept to deployment, I bring your ideas to life.
-			</p>
-			<div class="flex flex-wrap gap-3">
-				{
-					HERO_TECHNOLOGIES.map((tech) => (
-						<span class="badge badge-soft badge-xl border-1 hover:border-primary/20 cursor-default">
-							{tech}
-						</span>
-					))
-				}
-			</div>
-			<div class="flex gap-4 mt-6">
-				<button class="btn px-20 bg-linear-to-br from-primary to-secondary">
-					About Me
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="lucide lucide-arrow-right ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
-						data-lov-id="src/components/Hero.tsx:82:16"
-						data-lov-name="ArrowRight"
-						data-component-path="src/components/Hero.tsx"
-						data-component-line="82"
-						data-component-file="Hero.tsx"
-						data-component-name="ArrowRight"
-						data-component-content="%7B%22className%22%3A%22ml-2%20w-4%20h-4%20group-hover%3Atranslate-x-1%20transition-transform%22%7D"
-						><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
-					>
-				</button>
-				<button class="btn"> Get in Touch </button>
-			</div>
-		</div>
-		<div class="flex-2 card w-full shadow-2xl min-h-96">
-			<div class="card-body justify-center text-center">
+	<div class="hero-content flex-col lg:flex-row gap-8">
+		<div class="flex-2 w-full">
+			<div class="justify-center text-center">
 				<div class="avatar justify-center">
 					<div id="hero-image" class="w-1/3 lg:w-2/3 rounded-full border-3 border-primary">
 						<img src={YoImage.src} />
@@ -70,6 +32,34 @@ const HERO_TECHNOLOGIES = [
 				</div>
 				<h1 class="text-4xl mt-1">Leonardo Vertiz</h1>
 			</div>
+		</div>
+		<div class="flex-3 text-center lg:text-left">
+			<h2 class="text-7xl font-bold">Full-Stack</h2>
+			<h2 class="text-7xl font-bold text-gradient">Developer</h2>
+			<p class="py-6 text-2xl text-base-content/80">
+				Crafting modern web applications and cloud solutions with cutting-edge
+				technologies. From concept to deployment, I bring your ideas to life.
+			</p>
+			<div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+				{
+					HERO_TECHNOLOGIES.map((tech) => (
+						<span class="badge badge-soft badge-xl shadow-primary/20 hover:shadow-xl cursor-default">
+							{tech}
+						</span>
+					))
+				}
+			</div>
+			<div class="flex gap-4 mt-6 justify-center lg:justify-start">
+				<button class="btn px-8 bg-linear-to-br from-primary to-secondary gap-4">
+					About Me
+					<span class="material-symbols-outlined" style="font-size: medium;">arrow_forward</span>
+				</button>
+				<button class="btn hover:bg-primary"> Get in Touch </button>
+			</div>
+		</div>
+		<div class="hidden md:block -z-10">
+			<Orb size="200px" color="primary" left="20%" top="20%"/>
+			<Orb size="200px" color="secondary" left="70%" top="60%"/>
 		</div>
 	</div>
 </div>

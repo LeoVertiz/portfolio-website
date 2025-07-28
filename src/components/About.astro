@@ -1,0 +1,105 @@
+---
+
+const WHAT_I_VALUE= [
+	"Quality over quantity - every line of code matters",
+	"Continuous learning and improvement",
+	"Clear communication and collaboration",
+	"Building solutions that make a difference"
+];
+
+const TECHNICAL_EXPERTISE = [
+	{
+		name: "Frontend",
+		technologies: ["React", "Vue", "Next.js", "Nuxt.js", "Astro", "Tailwind CSS", "Typescript"]
+	},
+	{
+		name: "Backend",
+		technologies: ["Node.js", "Express", "NestJS", "Go", "Gin", ".Net"]
+	},
+	{
+		name: "Cloud",
+		technologies: ["AWS", "Azure", "GCP", "Docker"]
+	},
+	{
+		name: "Databases",
+		technologies: ["MySQL", "PostgreSQL", "MongoDB", "IndexedDB"]
+	}
+];
+
+---
+
+<div id="about" class="bg-base-200 py-16 px-4">
+	<h2 class="text-5xl font-bold text-center">
+		About
+		<span class="text-gradient">Me</span>
+	</h2>
+	<br>
+	<p class="text-xl text-center">
+		Passionate full-stack developer with expertise in modern web technologies and cloud solutions. <br>
+		I help businesses transform their ideas into scalable digital experiences.
+	</p>
+
+	<div class="grid md:grid-cols-2 gap-8 mt-8 container mx-auto">
+		<section>
+			<h4 class="text-3xl">My Journey</h4>
+			<p class="text-lg mt-4 text-gray-400">
+				With over 5 years of experience in software development,
+				I've had the privilege of working with startups and enterprises to build robust, scalable solutions.
+				My expertise spans across the entire development lifecycle, from initial concept and design to deployment and maintenance.
+				<br> <br>
+				I'm passionate about clean code, user experience, and staying up-to-date with the latest technologies.
+				When I'm not coding, you'll find me contributing to open-source projects,
+				writing technical blogs, or exploring new frameworks and tools.
+			</p>
+			<h4 class="text-3xl mt-8">What I value</h4>
+			<ul class="flex flex-col gap-2 mt-4 text-gray-400">
+				{
+				WHAT_I_VALUE.map((value) => (
+					<li class="flex items-center gap-2">
+						<div class="w-2 h-2 bg-primary rounded-full"></div>
+						{ value }
+					</li>
+				))
+				}
+			</ul>
+		</section>
+
+		<div class="flex flex-wrap justify-center items-center gap-8">
+			<div class="flex flex-col items-center justify-center border-1 border-gray-600 bg-base-100 p-12 rounded-lg gap-2 w-64">
+				<span class="material-symbols-outlined bg-linear-to-br from-primary to-secondary p-2 rounded-lg">timer</span>
+				<span class="ml-2 text-4xl font-bold">5+</span>
+				<span class="ml-2 text-gray-400">Years Experience</span>
+			</div>
+			<div class="flex flex-col items-center justify-center border-1 border-gray-600 bg-base-100 p-12 rounded-lg gap-2 w-64">
+				<span class="material-symbols-outlined bg-linear-to-br from-primary to-secondary p-2 rounded-lg">code</span>
+				<span class="ml-2 text-4xl font-bold">10</span>
+				<span class="ml-2 text-gray-400">Projects Completed</span>
+			</div>
+		</div>
+	</div>
+
+	<section class="container mx-auto mt-16">
+		<h3 class="text-2xl font-bold text-center">
+			Technical Expertise
+		</h3>
+		<div class="flex flex-wrap justify-center gap-8 mt-8">
+			{
+			TECHNICAL_EXPERTISE.map((expertise) => (
+				<div class="border-1 border-gray-600 bg-base-100 px-10 py-6 rounded-lg w-64">
+					<span class="text-lg text-secondary font-bold">{expertise.name}</span>
+					<div class="flex flex-wrap gap-2 mt-4">
+						{
+							expertise.technologies.map((tech) => (
+								<div class="badge badge-soft">{tech}</div>
+							))
+						}
+					</div>
+				</div>
+			))
+			}
+		</div>
+	</section>
+</div>
+
+<style>
+</style>
