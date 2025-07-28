@@ -58,7 +58,7 @@ const { available_for_new_projects, current_availability } = import.meta.env;
 			<p class="text-gray-400">{ current_availability || 'No availability information provided.' }</p>
 			<br>
 			{
-				available_for_new_projects == 'true' ? 
+				available_for_new_projects ? 
 				(
 					<div class="flex items-center gap-2">
 						<div class="w-3 h-3 bg-success/80 rounded-full"></div>
@@ -72,9 +72,5 @@ const { available_for_new_projects, current_availability } = import.meta.env;
 					</div>
 				)
 			}
-			{ available_for_new_projects }
-			{ typeof available_for_new_projects }
-			{ available_for_new_projects.length }
-			{ 'true'.length }
 		</div>
 	</div>
