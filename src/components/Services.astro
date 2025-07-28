@@ -1,0 +1,67 @@
+---
+const SERVICES = [
+	{
+		name: "Web Development",
+		icon: "language",
+		icon_color: "primary",
+		description: "Custom web applications built with modern frameworks and best practices.",
+		technologies: ["React", "Vue", "Next.js", "Nuxt.js", "Tailwind CSS", "TypeScript"]
+	},
+	{
+		name: "Cloud Solutions",
+		icon: "cloud",
+		icon_color: "secondary",
+		description: "Scalable cloud infrastructure and migration services across major platforms.",
+		technologies: ["AWS", "Azure", "GCP", "Serverless", "Docker"]
+	},
+	{
+		name: "Mobile Development",
+		icon: "mobile",
+		icon_color: "success",
+		description: "Creating cross-platform mobile applications for iOS and Android.",
+		technologies: ["React Native", "Flutter", "Swift", "Kotlin"]
+	},
+	{
+		name: "Progressive Web Apps",
+		icon: "mobile_code",
+		icon_color: "warning",
+		description: "Mobile-first applications with offline capabilities and native-like experience.",
+		technologies: ["Service Workers", "Offline Storage", "IndexedDB"]
+	},
+	{
+		name: "Database Architecture",
+		icon: "database",
+		icon_color: "primary",
+		description: "Optimized database design for both SQL and NoSQL systems.",
+		technologies: ["MySQL", "PostgreSQL", "MongoDB", "IndexedDB"]
+	},
+	{
+		name: "API Development",
+		icon: "storage",
+		icon_color: "secondary",
+		description: "RESTful and GraphQL APIs with robust authentication and security.",
+		technologies: ["Node.js", "Express", "NestJS", "Go", "Gin", "GraphQL", "JWT"]
+	},
+];
+---
+
+<div id="services" class="py-16 px-4">
+	<h2 class="text-5xl font-bold text-center">Development <span class="text-gradient">Services</span></h2>
+	<p class="text-lg text-center mt-4 text-gray-400">Comprehensive software solutions tailored to your business needs</p>
+
+	<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 container mx-auto">
+		{SERVICES.map((service) => (
+			<section class="bg-base-100 p-6 rounded-lg border-1 border-gray-800 hover:border-primary/50 shadow-primary hover:shadow-md/20 transition-all duration-500">
+				<span class="material-symbols-outlined text-4xl!" style={`color: var(--color-${service.icon_color});`}>{service.icon}</span>
+				<h4 class="text-2xl font-bold">{service.name}</h4>
+				<p class="mt-2 text-gray-400">{service.description}</p>
+				<div class="flex flex-wrap gap-4 mt-4">
+					{service.technologies.map((tech) => (
+						<div class="badge badge-soft">{tech}</div>
+					))}
+				</div>
+			</section>
+		))}
+	</div>
+</div>
+</div>
